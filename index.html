@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" type="image/png" href="assets/icon.png" />
+
+		<style>
+			#assets {
+				height: 1px;
+				overflow: hidden;
+				visibility: hidden;
+				width: 1px;
+				height: 1px;
+			}
+
+			body {
+				background-color: Black;
+				margin: 0;
+				overflow: hidden;
+				padding: 0;
+			}
+
+			canvas {
+				image-rendering: optimizeSpeed;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div align="center">
+			<canvas id="canvas" width="640" height="400"></canvas>
+		</div>
+
+		<div id="assets">
+			<img id="logoWhite" src="assets/sprites/logoWhite.png" width="590" height="68">
+
+			<img id=",Font" src="assets/font/comma.png" width="4" height="8">
+			<img id="-Font" src="assets/font/hyphen.png" width="6" height="8">
+			<img id=".Font" src="assets/font/period.png" width="3" height="8">
+			<img id="'Font" src="assets/font/apostrophe.png" width="3" height="8">
+			<img id="`Font" src="assets/font/grave.png" width="3" height="8">
+			<img id="0Font" src="assets/font/0.png" width="8" height="8">
+			<img id="1Font" src="assets/font/1.png" width="8" height="8">
+			<img id="2Font" src="assets/font/2.png" width="8" height="8">
+			<img id="3Font" src="assets/font/3.png" width="8" height="8">
+			<img id="4Font" src="assets/font/4.png" width="8" height="8">
+			<img id="5Font" src="assets/font/5.png" width="8" height="8">
+			<img id="6Font" src="assets/font/6.png" width="8" height="8">
+			<img id="7Font" src="assets/font/7.png" width="8" height="8">
+			<img id="8Font" src="assets/font/8.png" width="8" height="8">
+			<img id="9Font" src="assets/font/9.png" width="8" height="8">
+			<img id="aFont" src="assets/font/a.png" width="8" height="8">
+			<img id="bFont" src="assets/font/b.png" width="8" height="8">
+			<img id="cFont" src="assets/font/c.png" width="8" height="8">
+			<img id="dFont" src="assets/font/d.png" width="8" height="8">
+			<img id="eFont" src="assets/font/e.png" width="8" height="8">
+			<img id="fFont" src="assets/font/f.png" width="8" height="8">
+			<img id="gFont" src="assets/font/g.png" width="8" height="8">
+			<img id="hFont" src="assets/font/h.png" width="8" height="8">
+			<img id="iFont" src="assets/font/i.png" width="7" height="8">
+			<img id="jFont" src="assets/font/j.png" width="8" height="8">
+			<img id="kFont" src="assets/font/k.png" width="8" height="8">
+			<img id="lFont" src="assets/font/l.png" width="8" height="8">
+			<img id="mFont" src="assets/font/m.png" width="8" height="8">
+			<img id="nFont" src="assets/font/n.png" width="8" height="8">
+			<img id="oFont" src="assets/font/o.png" width="8" height="8">
+			<img id="pFont" src="assets/font/p.png" width="8" height="8">
+			<img id="qFont" src="assets/font/q.png" width="8" height="8">
+			<img id="rFont" src="assets/font/r.png" width="8" height="8">
+			<img id="sFont" src="assets/font/s.png" width="8" height="8">
+			<img id="tFont" src="assets/font/t.png" width="7" height="8">
+			<img id="uFont" src="assets/font/u.png" width="8" height="8">
+			<img id="vFont" src="assets/font/v.png" width="8" height="8">
+			<img id="wFont" src="assets/font/w.png" width="8" height="8">
+			<img id="xFont" src="assets/font/x.png" width="8" height="8">
+			<img id="yFont" src="assets/font/y.png" width="7" height="8">
+			<img id="zFont" src="assets/font/z.png" width="8" height="8">
+
+			<img id="logo" src="assets/sprites/logo.png" width="336" height="336">
+			<img id="heart" src="assets/sprites/heart.png" width="16" height="16">
+
+			<img id="panel" src="assets/sprites/panel.png" width="188" height="28">
+			<img id="enabled" src="assets/sprites/enabled.png" width="28" height="12">
+			<img id="charge" src="assets/sprites/charge.png" width="28" height="12">
+
+			<img id="playerIcon0" src="assets/sprites/playerIcon0.png" width="8" height="8">
+			<img id="playerIcon1" src="assets/sprites/playerIcon1.png" width="8" height="8">
+
+			<img id="player00" src="assets/sprites/player00.png" width="32" height="32">
+			<img id="player01" src="assets/sprites/player01.png" width="32" height="32">
+
+			<img id="player10" src="assets/sprites/player10.png" width="32" height="32">
+			<img id="player11" src="assets/sprites/player11.png" width="32" height="32">
+
+			<img id="redBuoy" src="assets/sprites/redBuoy.png" width="32" height="32">
+
+			<img id="playerExplosion0" src="assets/sprites/playerExplosion0.png" width="64" height="32">
+			<img id="playerExplosion1" src="assets/sprites/playerExplosion1.png" width="64" height="32">
+			<img id="playerExplosion2" src="assets/sprites/playerExplosion2.png" width="64" height="32">
+			<img id="playerExplosion3" src="assets/sprites/playerExplosion3.png" width="64" height="32">
+
+			<img id="normalShot" src="assets/sprites/normalShot.png" width="10" height="5">
+
+			<img id="lipstick0" src="assets/sprites/lipstick0.png" width="16" height="16">
+			<img id="lipstick1" src="assets/sprites/lipstick1.png" width="16" height="16">
+
+			<img id="bigKiss" src="assets/sprites/bigKiss.png" width="7" height="1">
+			<img id="bigKissBottom" src="assets/sprites/bigKissBottom.png" width="7" height="2">
+			<img id="bigKissTop" src="assets/sprites/bigKissTop.png" width="7" height="2">
+
+			<img id="mintShot" src="assets/sprites/mintShot.png" width="10" height="5">
+
+			<img id="friend00" src="assets/sprites/friend00.png" width="32" height="32">
+			<img id="friend01" src="assets/sprites/friend01.png" width="32" height="32">
+
+			<img id="friend10" src="assets/sprites/friend10.png" width="32" height="32">
+			<img id="friend11" src="assets/sprites/friend11.png" width="32" height="32">
+
+			<img id="umbrella0" src="assets/sprites/umbrella0.png" width="32" height="32">
+			<img id="umbrella1" src="assets/sprites/umbrella1.png" width="32" height="32">
+
+			<img id="splash" src="assets/sprites/splash.png" width="16" height="16">
+
+			<img id="explosion0" src="assets/sprites/explosion0.png" width="32" height="32">
+			<img id="explosion1" src="assets/sprites/explosion1.png" width="32" height="32">
+			<img id="explosion2" src="assets/sprites/explosion2.png" width="32" height="32">
+			<img id="explosion3" src="assets/sprites/explosion3.png" width="32" height="32">
+
+			<img id="bigExplosion0" src="assets/sprites/bigExplosion0.png" width="128" height="128">
+			<img id="bigExplosion1" src="assets/sprites/bigExplosion1.png" width="128" height="128">
+			<img id="bigExplosion2" src="assets/sprites/bigExplosion2.png" width="128" height="128">
+
+			<img id="bubble0" src="assets/sprites/bubble0.png" width="32" height="32">
+			<img id="bubble1" src="assets/sprites/bubble1.png" width="32" height="32">
+			<img id="bubble2" src="assets/sprites/bubble2.png" width="32" height="32">
+
+			<img id="drill0" src="assets/sprites/drill0.png" width="32" height="32">
+			<img id="drill1" src="assets/sprites/drill1.png" width="32" height="32">
+
+			<img id="fish0" src="assets/sprites/fish0.png" width="32" height="32">
+			<img id="fish1" src="assets/sprites/fish1.png" width="32" height="32">
+
+			<img id="flower0" src="assets/sprites/flower0.png" width="32" height="32">
+			<img id="flower1" src="assets/sprites/flower1.png" width="32" height="32">
+			<img id="flower2" src="assets/sprites/flower2.png" width="32" height="32">
+			<img id="flower3" src="assets/sprites/flower3.png" width="32" height="32">
+
+			<img id="ghost0" src="assets/sprites/ghost0.png" width="32" height="32">
+			<img id="ghost1" src="assets/sprites/ghost1.png" width="32" height="32">
+			<img id="ghost2" src="assets/sprites/ghost2.png" width="32" height="32">
+			<img id="ghost3" src="assets/sprites/ghost3.png" width="32" height="32">
+			<img id="ghost4" src="assets/sprites/ghost4.png" width="32" height="32">
+			<img id="ghost5" src="assets/sprites/ghost5.png" width="32" height="32">
+			<img id="ghost6" src="assets/sprites/ghost6.png" width="32" height="32">
+
+			<img id="mummy0" src="assets/sprites/mummy0.png" width="32" height="32">
+			<img id="mummy1" src="assets/sprites/mummy1.png" width="32" height="32">
+			<img id="mummy2" src="assets/sprites/mummy2.png" width="32" height="32">
+			<img id="mummy3" src="assets/sprites/mummy3.png" width="32" height="32">
+			<img id="mummy4" src="assets/sprites/mummy4.png" width="32" height="32">
+			<img id="mummy5" src="assets/sprites/mummy5.png" width="32" height="32">
+
+			<img id="plane0" src="assets/sprites/plane0.png" width="32" height="16">
+			<img id="plane1" src="assets/sprites/plane1.png" width="32" height="16">
+			<img id="plane2" src="assets/sprites/plane2.png" width="32" height="16">
+
+			<img id="rocket0" src="assets/sprites/rocket0.png" width="16" height="32">
+			<img id="rocket1" src="assets/sprites/rocket1.png" width="16" height="32">
+
+			<img id="skull0" src="assets/sprites/skull0.png" width="32" height="32">
+			<img id="skull1" src="assets/sprites/skull1.png" width="32" height="32">
+
+			<img id="snake0" src="assets/sprites/snake0.png" width="32" height="32">
+			<img id="snake1" src="assets/sprites/snake1.png" width="32" height="32">
+			<img id="snake2" src="assets/sprites/snake2.png" width="32" height="32">
+			<img id="snake3" src="assets/sprites/snake3.png" width="32" height="32">
+
+			<img id="enemyShot0" src="assets/sprites/enemyShot0.png" width="8" height="8">
+			<img id="enemyShot1" src="assets/sprites/enemyShot1.png" width="8" height="8">
+
+			<img id="ship" src="assets/sprites/ship.png" width="272" height="256">
+
+			<img id="ball" src="assets/sprites/ball.png" width="32" height="32">
+
+			<img id="skull" src="assets/sprites/skull.png" width="128" height="128">
+
+			<img id="arrow" src="assets/sprites/arrow.png" width="64" height="32">
+
+			<img id="sphinx" src="assets/sprites/sphinx.png" width="288" height="360">
+			<img id="sphinxEye" src="assets/sprites/sphinxEye.png" width="43" height="14">
+
+			<img id="ray" src="assets/sprites/ray.png" width="1" height="24">
+			<img id="rayBase" src="assets/sprites/rayBase.png" width="24" height="24">
+
+			<img id="submarine" src="assets/sprites/submarine.png" width="256" height="128">
+			<img id="periscope0" src="assets/sprites/periscope0.png" width="32" height="32">
+			<img id="periscope1" src="assets/sprites/periscope1.png" width="32" height="32">
+			<img id="propeller0" src="assets/sprites/propeller0.png" width="10" height="52">
+			<img id="propeller1" src="assets/sprites/propeller1.png" width="10" height="52">
+			<img id="propeller2" src="assets/sprites/propeller2.png" width="10" height="52">
+
+			<img id="zeppelin" src="assets/sprites/zeppelin.png" width="384" height="272">
+
+			<img id="sight" src="assets/sprites/sight.png" width="18" height="1">
+			<img id="sightBottom" src="assets/sprites/sightBottom.png" width="18" height="11">
+			<img id="sightTop" src="assets/sprites/sightTop.png" width="18" height="11">
+
+			<img id="tile00_0" src="assets/tiles/00_0.png" width="24" height="24">
+			<img id="tile00_1" src="assets/tiles/00_1.png" width="24" height="24">
+			<img id="tile00_2" src="assets/tiles/00_2.png" width="24" height="24">
+			<img id="tile00_3" src="assets/tiles/00_3.png" width="24" height="24">
+			<img id="tile00_4" src="assets/tiles/00_4.png" width="24" height="24">
+			<img id="tile00_5" src="assets/tiles/00_5.png" width="24" height="24">
+			<img id="tile00_6" src="assets/tiles/00_6.png" width="24" height="24">
+			<img id="tile00_7" src="assets/tiles/00_7.png" width="24" height="24">
+
+			<img id="tile01_0" src="assets/tiles/01_0.png" width="24" height="24">
+			<img id="tile01_1" src="assets/tiles/01_1.png" width="24" height="24">
+			<img id="tile01_2" src="assets/tiles/01_2.png" width="24" height="24">
+			<img id="tile01_3" src="assets/tiles/01_3.png" width="24" height="24">
+			<img id="tile01_4" src="assets/tiles/01_4.png" width="24" height="24">
+			<img id="tile01_5" src="assets/tiles/01_5.png" width="24" height="24">
+			<img id="tile01_6" src="assets/tiles/01_6.png" width="24" height="24">
+			<img id="tile01_7" src="assets/tiles/01_7.png" width="24" height="24">
+
+			<img id="tile02_0" src="assets/tiles/02_0.png" width="24" height="24">
+			<img id="tile02_1" src="assets/tiles/02_1.png" width="24" height="24">
+			<img id="tile02_2" src="assets/tiles/02_2.png" width="24" height="24">
+			<img id="tile02_3" src="assets/tiles/02_3.png" width="24" height="24">
+			<img id="tile02_4" src="assets/tiles/02_4.png" width="24" height="24">
+			<img id="tile02_5" src="assets/tiles/02_5.png" width="24" height="24">
+			<img id="tile02_6" src="assets/tiles/02_6.png" width="24" height="24">
+			<img id="tile02_7" src="assets/tiles/02_7.png" width="24" height="24">
+
+			<img id="tile03_0" src="assets/tiles/03_0.png" width="24" height="24">
+			<img id="tile03_1" src="assets/tiles/03_1.png" width="24" height="24">
+			<img id="tile03_2" src="assets/tiles/03_2.png" width="24" height="24">
+			<img id="tile03_3" src="assets/tiles/03_3.png" width="24" height="24">
+			<img id="tile03_4" src="assets/tiles/03_4.png" width="24" height="24">
+			<img id="tile03_5" src="assets/tiles/03_5.png" width="24" height="24">
+			<img id="tile03_6" src="assets/tiles/03_6.png" width="24" height="24">
+			<img id="tile03_7" src="assets/tiles/03_7.png" width="24" height="24">
+
+			<img id="tileA0" src="assets/tiles/A0.png" width="24" height="24">
+			<img id="tileA1" src="assets/tiles/A1.png" width="24" height="24">
+
+			<img id="tileC0" src="assets/tiles/C0.png" width="24" height="24">
+			<img id="tileC1" src="assets/tiles/C1.png" width="24" height="24">
+			<img id="tileC2" src="assets/tiles/C2.png" width="24" height="24">
+
+			<img id="tileP0" src="assets/tiles/P0.png" width="24" height="24">
+			<img id="tileP1" src="assets/tiles/P1.png" width="24" height="24">
+			<img id="tileP2" src="assets/tiles/P2.png" width="24" height="24">
+			<img id="tileP3" src="assets/tiles/P3.png" width="24" height="24">
+			<img id="tileP4" src="assets/tiles/P4.png" width="24" height="24">
+			<img id="tileP5" src="assets/tiles/P5.png" width="24" height="24">
+			<img id="tileP6" src="assets/tiles/P6.png" width="24" height="24">
+			<img id="tileP7" src="assets/tiles/P7.png" width="24" height="24">
+			<img id="tileP8" src="assets/tiles/P8.png" width="24" height="24">
+			<img id="tileP9" src="assets/tiles/P9.png" width="24" height="24">
+
+			<img id="tileS0" src="assets/tiles/S0.png" width="24" height="24">
+			<img id="tileS1" src="assets/tiles/S1.png" width="24" height="24">
+			<img id="tileS2" src="assets/tiles/S2.png" width="24" height="24">
+			<img id="tileS3" src="assets/tiles/S3.png" width="24" height="24">
+
+			<audio id="maragatoSound" src="assets/sounds/maragato.mp3"></audio>
+			<audio id="arrowSound" src="assets/sounds/arrow.mp3"></audio>
+			<audio id="ballSound" src="assets/sounds/ball.mp3"></audio>
+			<audio id="bigExplosionSound" src="assets/sounds/bigExplosion.mp3"></audio>
+			<audio id="bigKissSound" src="assets/sounds/bigKiss.mp3"></audio>
+			<audio id="chompSound" src="assets/sounds/chomp.mp3"></audio>
+			<audio id="enableSound" src="assets/sounds/enable.mp3"></audio>
+			<audio id="enableBigKissSound" src="assets/sounds/enableBigKiss.mp3"></audio>
+			<audio id="enableFriendSound" src="assets/sounds/enableFriend.mp3"></audio>
+			<audio id="enableLipstickSound" src="assets/sounds/enableLipstick.mp3"></audio>
+			<audio id="enableMintSound" src="assets/sounds/enableMint.mp3"></audio>
+			<audio id="enableNormalSound" src="assets/sounds/enableNormal.mp3"></audio>
+			<audio id="enableSlowDownSound" src="assets/sounds/enableSlowDown.mp3"></audio>
+			<audio id="enableSpeedUpSound" src="assets/sounds/enableSpeedUp.mp3"></audio>
+			<audio id="enableUmbrellaSound" src="assets/sounds/enableUmbrella.mp3"></audio>
+			<audio id="enemyExplosionSound" src="assets/sounds/enemyExplosion.mp3"></audio>
+			<audio id="hugeExplosionSound" src="assets/sounds/hugeExplosion.mp3"></audio>
+			<audio id="kissSound" src="assets/sounds/kiss.mp3"></audio>
+			<audio id="lifeSound" src="assets/sounds/life.mp3"></audio>
+			<audio id="mintSound" src="assets/sounds/mint.mp3"></audio>
+			<audio id="missSound" src="assets/sounds/miss.mp3"></audio>
+			<audio id="pauseSound" src="assets/sounds/pause.mp3"></audio>
+			<audio id="playerExplosionSound" src="assets/sounds/playerExplosion.mp3"></audio>
+			<audio id="raySound" src="assets/sounds/ray.mp3"></audio>
+			<audio id="redBuoySound" src="assets/sounds/redBuoy.mp3"></audio>
+			<audio id="rocketSound" src="assets/sounds/rocket.mp3"></audio>
+			<audio id="sightSound" src="assets/sounds/sight.mp3"></audio>
+			<audio id="skullSound" src="assets/sounds/skull.mp3"></audio>
+			<audio id="sphinxSound" src="assets/sounds/sphinx.mp3"></audio>
+			<audio id="splashSound" src="assets/sounds/splash.mp3"></audio>
+			<audio id="submarineSound" src="assets/sounds/submarine.mp3"></audio>
+			<audio id="umbrellaSound" src="assets/sounds/umbrella.mp3"></audio>
+			<audio id="zeppelinSound" src="assets/sounds/zeppelin.mp3"></audio>
+
+			<audio id="0Theme" src="assets/themes/0.mp3" loop></audio>
+			<audio id="1Theme" src="assets/themes/1.mp3" loop></audio>
+			<audio id="2Theme" src="assets/themes/2.mp3" loop></audio>
+			<audio id="3Theme" src="assets/themes/3.mp3" loop></audio>
+			<audio id="4Theme" src="assets/themes/4.mp3" loop></audio>
+			<audio id="5Theme" src="assets/themes/5.mp3" loop></audio>
+			<audio id="6Theme" src="assets/themes/6.mp3" loop></audio>
+			<audio id="titleTheme" src="assets/themes/title.mp3" loop></audio>
+		</div>
+
+		<script src="node_modules/core2d/core2d.js"></script>
+		<script src="registry.js"></script>
+		<script src="game.js"></script>
+	</body>
+</html>

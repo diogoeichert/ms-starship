@@ -1,0 +1,1 @@
+window.REGISTERED = true;
