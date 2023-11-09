@@ -6237,7 +6237,7 @@ TitleView.prototype.update = function() {
 TitleView.prototype.wait = function() {
 	var leftMargin = this.sprite.rect.getRight() + FONT_SIZE;
 	write(new Point(leftMargin, this.logoTop + (8 * FONT_SIZE)), "ms. starship");
-	write(new Point(leftMargin, this.logoTop + (10 * FONT_SIZE)), "maragato 2013 - 2021");
+	write(new Point(leftMargin, this.logoTop + (10 * FONT_SIZE)), "maragato 2013");
 	write(new Point(leftMargin, this.logoTop + (12 * FONT_SIZE)), "music by kevin mac leod");
 
 	if (!window.REGISTERED) {
